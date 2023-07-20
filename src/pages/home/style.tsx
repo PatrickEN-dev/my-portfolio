@@ -28,6 +28,37 @@ export const Header = styled("header", {
   },
 });
 
+export const DivAbout = styled("div", {
+  backgroundColor: "transparent",
+  color: "$grey4",
+  display: "flex",
+
+  p: {
+    display: "flex",
+    fontSize: "$title4",
+    fontWeight: "500",
+    alignItems: "center",
+  },
+
+  span: {
+    marginLeft: "10px",
+    background: "$gradientText",
+    backgroundClip: "text",
+    color: "$grey3",
+    fontWeight: "800",
+    fontSize: "$title1"
+  },
+  "@tablet": {
+    backgroundPosition: "right -10% center",
+  },
+  "@mobile": {
+    backgroundImage: `none`,
+  },
+  "@mobileLittle": {
+    flexDirection: "column",
+  },
+})
+
 export const HeaderContent = styled("div", {
   maxWidth: "100%",
   width: "36rem",

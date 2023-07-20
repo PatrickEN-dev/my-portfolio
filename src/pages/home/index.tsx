@@ -1,4 +1,5 @@
 // Styles
+import { TypeAnimation } from "react-type-animation"
 import { Container, Flex } from "@/styles/Global";
 import { Text } from "@/styles/Text";
 import { Button } from "@/styles/Buttons";
@@ -25,6 +26,7 @@ import {
   ProjectsAreaSocialMediaMessage,
   ProjectAreaWrapperColumns,
   ProjectsAreaContent,
+  DivAbout
 } from "./style";
 
 export const Home = (): JSX.Element => {
@@ -46,17 +48,22 @@ export const Home = (): JSX.Element => {
               />
               <Text color="grey4">Hello, my name is {userData.nameUser}</Text>
             </Flex>
-            <Text as="h1" type="heading1" color="grey5">
-            I{" "}
-              <Text as="span" type="heading1" color="brand1">
-                love
-              </Text>{" "}
-              creating and{" "}
-              <Text as="span" type="heading1" color="brand1">
-                developing
-              </Text>{" "}
-              softwares
-            </Text>
+            <DivAbout>
+              <p>I'm web developer </p>
+              <TypeAnimation sequence={[
+                "Front-end",
+                2000,
+                "Back-end",
+                2000,
+                "Full-Stack",
+                2000,
+              ]}
+                speed={50}
+                className="text-change"
+                wrapper="span"
+                repeat={Infinity}
+              />
+            </DivAbout>
             <Text type="body1" color="grey2">
               Discover here in this environment, created especially for you, all
               my front-end and back-end projects and technologies
