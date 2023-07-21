@@ -12,6 +12,7 @@ import { Contacts } from "@/components/Contacts";
 // Data
 import { stackData } from "@/utils/stackData";
 import { userData } from "@/utils/userData";
+import polyglot from "@/utils/polyglot";
 
 import { FaGithub } from "react-icons/fa";
 
@@ -50,18 +51,20 @@ export const Home = (): JSX.Element => {
             </Flex>
             <DivAbout>
               <p>I'm web developer </p>
-              <TypeAnimation sequence={[
-                "Front-end",
-                2000,
-                "Back-end",
-                2000,
-                "Full-Stack",
-                2000,
-              ]}
+              <TypeAnimation
+                sequence={[
+                  polyglot.t('Front-end'),
+                  2000,
+                  polyglot.t('Back-end'),
+                  2000,
+                  polyglot.t('Full-Stack'),
+                  2000,
+                ]}
                 speed={50}
                 className="text-change"
                 wrapper="span"
                 repeat={Infinity}
+                translate="no"
               />
             </DivAbout>
             <Text type="body1" color="grey2">
